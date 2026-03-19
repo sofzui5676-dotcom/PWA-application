@@ -1,0 +1,28 @@
+:root {
+    /* Цвета */
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --bg-card: #2d2d2d;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --accent: #bb86fc;
+    --accent-hover: #a06cd5;
+    --success: #4caf50;
+    --danger: #f44336;
+    --warning: #ff9800;
+    
+    /* Размеры */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    
+    /* Тени */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.3);
+    
+    /* Анимации */
+    --transition: all 0.3s ease;
+}

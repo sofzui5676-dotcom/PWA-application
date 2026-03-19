@@ -1,0 +1,14 @@
+{
+  "name": "smart-dashboard-pwa",
+  "version": "1.0.0",
+  "description": "PWA Smart Dashboard with Tasks, Notes and Tracker",
+  "scripts": {
+    "start": "npx http-server . -p 3000",
+    "docker:build": "docker build -t smart-dashboard .",
+    "docker:run": "docker run -p 3000:3000 smart-dashboard",
+    "docker:compose": "docker-compose up"
+  },
+  "keywords": ["pwa", "dashboard", "offline-first"],
+  "author": "",
+  "license": "MIT"
+}

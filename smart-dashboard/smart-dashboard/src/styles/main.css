@@ -1,0 +1,375 @@
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* Header */
+.app-header {
+    background-color: var(--bg-secondary);
+    padding: var(--spacing-md) var(--spacing-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.app-header h1 {
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+.app-nav {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.nav-btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    color: var(--text-secondary);
+    border-radius: 20px;
+    transition: var(--transition);
+}
+
+.nav-btn:hover {
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+}
+
+/* Main Content */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
+}
+
+/* Module Header */
+.module-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.module-header h2 {
+    font-size: 2rem;
+    color: var(--accent);
+}
+
+/* Points Badge */
+.points-badge {
+    background-color: var(--accent);
+    color: var(--bg-primary);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Tasks */
+.task-form {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+    background-color: var(--bg-secondary);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+}
+
+.task-form input {
+    flex: 1;
+    padding: var(--spacing-sm);
+    background-color: var(--bg-card);
+    border: 1px solid var(--bg-card);
+    color: var(--text-primary);
+    border-radius: 4px;
+}
+
+.task-form input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.task-form button {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background-color: var(--accent);
+    color: var(--bg-primary);
+    border-radius: 4px;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.task-form button:hover {
+    background-color: var(--accent-hover);
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background-color: var(--bg-secondary);
+    margin-bottom: var(--spacing-sm);
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.task-item:hover {
+    transform: translateX(4px);
+    box-shadow: var(--shadow-md);
+}
+
+.task-item.completed {
+    opacity: 0.7;
+}
+
+.task-item.completed .task-title {
+    text-decoration: line-through;
+}
+
+.task-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.task-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.task-points {
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.delete-task {
+    opacity: 0.5;
+    transition: var(--transition);
+}
+
+.delete-task:hover {
+    opacity: 1;
+    color: var(--danger);
+}
+
+/* Notes Grid */
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.note-card {
+    background-color: var(--bg-secondary);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.note-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.note-title {
+    color: var(--accent);
+    margin-bottom: var(--spacing-sm);
+}
+
+.note-preview {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.4;
+}
+
+.note-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.note-date {
+    color: var(--text-secondary);
+}
+
+.note-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.note-actions button {
+    opacity: 0.5;
+    transition: var(--transition);
+}
+
+.note-actions button:hover {
+    opacity: 1;
+}
+
+.edit-note:hover {
+    color: var(--warning);
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: var(--bg-secondary);
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.modal-content h3 {
+    color: var(--accent);
+    margin-bottom: var(--spacing-md);
+}
+
+#note-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+#note-form input,
+#note-form textarea {
+    padding: var(--spacing-sm);
+    background-color: var(--bg-card);
+    border: 1px solid var(--bg-card);
+    color: var(--text-primary);
+    border-radius: 4px;
+}
+
+#note-form textarea {
+    resize: vertical;
+}
+
+.modal-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: flex-end;
+}
+
+.modal-actions button {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.cancel-btn {
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+}
+
+.save-btn {
+    background-color: var(--accent);
+    color: var(--bg-primary);
+    font-weight: bold;
+}
+
+.save-btn:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Leaderboard */
+.podium {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.podium-item {
+    background-color: var(--bg-secondary);
+    padding: var(--spacing-md);
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 120px;
+}
+
+.podium-medal {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.podium-name {
+    font-weight: bold;
+    margin-bottom: var(--spacing-xs);
+}
+
+.podium-points {
+    color: var(--accent);
+}
+
+.leaderboard-table {
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.leaderboard-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leaderboard-table th {
+    background-color: var(--bg-card);
+    padding: var(--spacing-md);
+    text-align: left;
+    color: var(--accent);
+}
+
+.leaderboard-table td {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--bg-card);
+}
+
+.leaderboard-table tr:last-child td {
+    border-bottom: none;
+}
+
+.leaderboard-table tr:hover td {
+    background-color: var(--bg-card);
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    color: var(--text-secondary);
+    padding: var(--spacing-xl);
+    font-size: 1.2rem;
+}
+
+/* Primary Button */
+.primary-btn {
+    background-color: var(--accent);
+    color: var(--bg-primary);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: 4px;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.primary-btn:hover {
+    background-color: var(--accent-hover);
+}
